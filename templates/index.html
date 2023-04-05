@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dutch to English and Chinese Translation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        margin: 0;
+        padding: 0;
+        font-size: 16;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      form {
+        margin: 0 auto;
+        width: 500px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-shadow: 0 0 10px #ccc;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      input[type="text"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #0069d9;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Dutch to English and Chinese Translation</h1>
+    <form method="post">
+      <label for="dutch_text">Enter Dutch text:</label>
+      <input type="text" name="dutch_text" id="dutch_text" />
+      <label for="english_text">English translation:</label>
+      <input
+        type="text"
+        name="english_text"
+        id="english_text"
+        value="{{ english_text|default('') }}"
+      />
+      <label for="chinese_text">Chinese translation:</label>
+      <input
+        type="text"
+        name="chinese_text"
+        id="chinese_text"
+        value="{{ chinese_text|default('') }}"
+      />
+      <input type="submit" value="Translate" />
+    </form>
+  </body>
+</html>
