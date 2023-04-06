@@ -33,4 +33,5 @@ def translate_text():
     return render_template('index.html', dutch_text=dutch_text, english_text=english_text, chinese_text=chinese_text)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Run the app using a production-ready server such as Gunicorn or uWSGI
+    app.run() 

@@ -49,6 +49,18 @@
       input[type="submit"]:hover {
         background-color: #0069d9;
       }
+      .translation {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        font-size: 16px;
+        background-color: #f7f7f7;
+        color: #333;
+      }
     </style>
   </head>
   <body>
@@ -56,8 +68,12 @@
     <form method="post">
       <label for="dutch_text">Enter Dutch text:</label>
       <input type="text" name="dutch_text" id="dutch_text" />
+      {% if dutch_text %}
+      <p>Entered Dutch Text: {{ dutch_text }}</p>
+      {% endif %}
       <label for="english_text">English translation:</label>
       <input
+        class="translation"
         type="text"
         name="english_text"
         id="english_text"
@@ -65,6 +81,7 @@
       />
       <label for="chinese_text">Chinese translation:</label>
       <input
+        class="translation"
         type="text"
         name="chinese_text"
         id="chinese_text"
