@@ -98,21 +98,9 @@
       <p>Entered Dutch Text: {{ dutch_text }}</p>
       {% endif %}
       <label for="english_text">English translation:</label>
-      <input
-        class="translation"
-        type="text"
-        name="english_text"
-        id="english_text"
-        value="{{ english_text|default('') }}"
-      />
+      <p class="translation">{{ english_text|default('') }}</p>
       <label for="chinese_text">Chinese translation:</label>
-      <input
-        class="translation"
-        type="text"
-        name="chinese_text"
-        id="chinese_text"
-        value="{{ chinese_text|default('') }}"
-      />
+      <p class="translation">{{ chinese_text|default('') }}</p>
       <input type="submit" value="Translate" />
     </form>
   </body>
